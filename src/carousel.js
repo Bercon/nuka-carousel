@@ -868,9 +868,7 @@ const Carousel = createReactClass({
         ? this.props.cellSpacing / 2 * -1 + 'px 0px'
         : '0px ' + this.props.cellSpacing / 2 * -1 + 'px',
       padding: 0,
-      height: this.props.vertical
-        ? listWidth + spacingOffset
-        : this.state.slideHeight,
+      height: 'auto',
       width: this.props.vertical ? 'auto' : listWidth + spacingOffset,
       cursor: this.state.dragging === true ? 'pointer' : 'inherit',
       boxSizing: 'border-box',
@@ -883,7 +881,7 @@ const Carousel = createReactClass({
       position: 'relative',
       display: 'block',
       overflow: this.props.frameOverflow,
-      height: this.props.vertical ? this.state.frameWidth || 'initial' : 'auto',
+      height: 'auto',
       margin: this.props.framePadding,
       padding: 0,
       transform: 'translate3d(0, 0, 0)',
